@@ -1,6 +1,10 @@
-cmake_minimum_required(VERSION 3.21)
+cmake_minimum_required(VERSION 3.16)
 project(Mini_Projet C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(Mini_Projet apptest.c)
+# Ajoutez tous les fichiers sources ici
+add_executable(Mini_Projet
+        apptest.c
+        test.c
+        )

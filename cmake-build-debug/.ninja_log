@@ -1,0 +1,7 @@
+# ninja log v5
+4	199	7579508448282366	CMakeFiles/Mini_Projet.dir/apptest.c.obj	aede213a19875481
+2	401	7579509052308760	build.ninja	9a0995c63356fa46
+3	243	7579508935272917	CMakeFiles/Mini_Projet.dir/test.c.obj	3eb6c2c9b6d695c
+244	529	7579508938026112	Mini_Projet.exe	4933f4db2b2562fa
+3	226	7579509553702023	CMakeFiles/Mini_Projet.dir/test.c.obj	3eb6c2c9b6d695c
+227	424	7579509555587133	Mini_Projet.exe	4933f4db2b2562fa

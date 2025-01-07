@@ -2,21 +2,17 @@
 #define TEST_LIB_H
 
 #include <stdio.h>
-#include <stdbool.h>
+#include <stdlib.h>
+#include <unistd.h>
 
-// Définition des types de tests
-typedef struct {
-    const char *test_name;
-    bool (*test_function)(void); // Pointeur vers la fonction de test
-} TestCase;
+#define TEST(function) int function(void)
 
-// Prototype pour initialiser la librairie de test
-void init_test_library(void);
+void run_tests(void);
 
-// Prototype pour exécuter les tests
-void run_tests(const TestCase *tests, int num_tests);
+int test_1(void);
+void test_2(void);
+void test_3(void);
 
-// Fonction utilitaire pour afficher les résultats
-void print_test_result(const char *test_name, bool success);
+const char* strbool(int v);
 
 #endif // TEST_LIB_H
