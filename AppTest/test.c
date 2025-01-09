@@ -24,3 +24,7 @@ int test_1(void){
 int test_2(void){
     return 0;
 };
+
+int test_random_data(void){
+    
+}

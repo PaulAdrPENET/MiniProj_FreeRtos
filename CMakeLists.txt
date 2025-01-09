@@ -5,6 +5,6 @@ set(CMAKE_C_STANDARD 99)
 
 # Ajoutez tous les fichiers sources ici
 add_executable(Mini_Projet
-        apptest.c
-        test.c
+        AppTest/apptest.c
+        AppTest/test.c
         )

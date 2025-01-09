@@ -12,5 +12,4 @@ int main() {
     test_all(tests);
 
     return EXIT_SUCCESS;
-
 }
