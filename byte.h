@@ -1,6 +1,7 @@
 //
 // Created by paula on 09/01/2025.
 //
+#include <stdint.h>
 
 #ifndef MINI_PROJET_BYTE_H
 #define MINI_PROJET_BYTE_H
@@ -13,7 +14,7 @@ htole_t *htole = NULL;
 htobe_t *htobe = NULL;
 */
 
-void Swap8(char *a, char *b);
+void Swap8(uint8_t *a,uint8_t *b);
 
 int htole(int u32);
 

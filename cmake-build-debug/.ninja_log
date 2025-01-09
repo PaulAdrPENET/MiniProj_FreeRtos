@@ -1,7 +1,13 @@
 # ninja log v5
+26	271	7581209487961675	CMakeFiles/Mini_Projet.dir/main.c.obj	7f80eca8e020ecdd
+20	450	7581203116034835	CMakeFiles/Mini_Projet.dir/parser.c.obj	1ff886fbe12468cd
 2	144	7581131119588119	CMakeFiles/Mini_Projet.dir/apptest.c.obj	aede213a19875481
-0	157	7581135617947435	CMakeFiles/Mini_Projet.dir/AppTest/apptest.c.obj	ae4000c504968a2b
-2	401	7581161258438957	build.ninja	9a0995c63356fa46
-12	155	7581135617924874	CMakeFiles/Mini_Projet.dir/AppTest/test.c.obj	97dc56a7c8830fea
-12	147	7581131119613331	CMakeFiles/Mini_Projet.dir/test.c.obj	3eb6c2c9b6d695c
-157	291	7581135619204131	Mini_Projet.exe	58f5b72eec3b3760
+4	199	7581207290634098	CMakeFiles/Mini_Projet.dir/byte.c.obj	bf7b5eaa6111a962
+4	261	7581206273621129	CMakeFiles/Mini_Projet.dir/AppTest/apptest.c.obj	ae4000c504968a2b
+21	267	7581206273676018	CMakeFiles/Mini_Projet.dir/AppTest/test.c.obj	97dc56a7c8830fea
+1	416	7581209601854949	build.ninja	9a0995c63356fa46
+6	262	7581209487865261	CMakeFiles/Mini_Projet.dir/test.c.obj	3eb6c2c9b6d695c
+271	526	7581209490358334	Mini_Projet.exe	364d3ee19f4e219f
+67	475	7581203116034835	CMakeFiles/Mini_Projet.dir/signal.c.obj	2d5ebceebdb5dc89
+41	501	7581203116667196	CMakeFiles/Mini_Projet.dir/mux_demux.c.obj	e3d6b85e907f287d
+92	502	7581203116653982	CMakeFiles/Mini_Projet.dir/trame.c.obj	49585491e7ce18a7
