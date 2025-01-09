@@ -6,13 +6,17 @@
 int main(){
     srand((unsigned int)time(NULL));
 
+#ifdef ACTIVATE_TEST
     printf("=== Running Tests ===\n");
     test_t tests[] = {
-            DECL_TEST(test_1),
-            DECL_TEST(test_2),
-            DECL_TEST(test_frames),
+            DECL_TEST(test_frames_generation),
+#ifdef ADVANCED_TEST_INFO
+            DECL_TEST(test_print_frames),
+#endif
             LAST_TEST
     };
     test_all(tests);
+#endif
+
     return EXIT_SUCCESS;
 }

@@ -3,11 +3,16 @@
 //
 #include <stdlib.h>
 #include <time.h>
-#include "test.h"
+#include "TEST/test_frame.h"
+#include "TEST/test.h"
 #include "signal.h"
 #include "trame.h"
 
 #ifndef MINI_PROJET_MAIN_H
 #define MINI_PROJET_MAIN_H
+
+#define ACTIVATE_TEST
+#define ADVANCED_TEST_INFO
+
 
 #endif //MINI_PROJET_MAIN_H

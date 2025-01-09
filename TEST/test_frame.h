@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-#include "trame.h"
+#include "../trame.h"
 #include "test.h"
 
 //const char* strbool(int v);
