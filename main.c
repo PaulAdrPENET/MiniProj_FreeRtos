@@ -10,6 +10,7 @@ int main(){
     test_t tests[] = {
             DECL_TEST(test_1),
             DECL_TEST(test_2),
+            DECL_TEST(test_frames),
             LAST_TEST
     };
     test_all(tests);

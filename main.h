@@ -5,6 +5,7 @@
 #include <time.h>
 #include "test.h"
 #include "signal.h"
+#include "trame.h"
 
 #ifndef MINI_PROJET_MAIN_H
 #define MINI_PROJET_MAIN_H

@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include "trame.h"
 
 #define DECL_TEST(test) {&test,#test}
 #define LAST_TEST {NULL,NULL}
@@ -22,6 +23,8 @@ void test_all(test_t * test);
 int test_1(void);
 int test_2(void);
 
-int test_random_data(void);
+//int test_random_data(void);
+
+int test_frames(void);
 
 #endif // TEST_LIB_H
