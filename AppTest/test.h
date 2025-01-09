@@ -22,4 +22,6 @@ void test_all(test_t * test);
 int test_1(void);
 int test_2(void);
 
+int test_random_data(void);
+
 #endif // TEST_LIB_H
