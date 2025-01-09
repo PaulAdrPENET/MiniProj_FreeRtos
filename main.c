@@ -9,6 +9,7 @@ int main(){
 #ifdef ACTIVATE_TEST
     printf("=== Running Tests ===\n");
     test_t tests[] = {
+            DECL_TEST(test_rand8),
             DECL_TEST(test_frames_generation),
 #ifdef ADVANCED_TEST_INFO
             DECL_TEST(test_print_frames),

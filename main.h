@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include "TEST/test_frame.h"
+#include "TEST/test_signal.h"
 #include "TEST/test.h"
 #include "signal.h"
 #include "trame.h"
