@@ -5,14 +5,21 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-#define TEST(function) int function(void)
+#define DECL_TEST(test) {&test,#test}
+#define LAST_TEST {NULL,NULL}
 
-void run_tests(void);
+typedef int(test_func_t)(void);
+
+typedef struct test_s{
+    test_func_t *call;
+    const char *name;
+} test_t;
+
+void test_all(test_t * test);
+
+//const char* strbool(int v);
 
 int test_1(void);
-void test_2(void);
-void test_3(void);
-
-const char* strbool(int v);
+int test_2(void);
 
 #endif // TEST_LIB_H

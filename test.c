@@ -1,24 +1,26 @@
 #include "test.h"
 
-void run_tests(void){
-    printf("=== Running Tests ===\n");
-    printf(strbool(test_1()));
-};
+/*
+const char* strbool(int v){
+    static const char* array[2] = {
+            "[FAILED]",
+            "[PASSED]"};
+    return array [v & 1];
+}
+ */
+
+void test_all(test_t * test){
+    for (;test->call;test++){
+        int ret = test->call(); //0 ou 1
+        const char* status = ret ? "[PASSED]" : "[FAILED]";
+        printf("%s %s \n",test->name, status);
+    }
+}
 
 int test_1(void){
     return 1;
 };
 
-void test_2(void){
-
+int test_2(void){
+    return 0;
 };
-
-void test_3(void){
-};
-
-const char* strbool(int v){
-    static const char* array[2] = {
-            "[FAILED]",
-                "[PASSED]"};
-    return array [v & 1];
-}
