@@ -11,6 +11,7 @@ int main(){
     test_t tests[] = {
             DECL_TEST(test_rand8),
             DECL_TEST(test_swap8),
+            DECL_TEST(test_htobe),
             DECL_TEST(test_frames_generation),
 #ifdef ADVANCED_TEST_INFO
             DECL_TEST(test_print_frames),

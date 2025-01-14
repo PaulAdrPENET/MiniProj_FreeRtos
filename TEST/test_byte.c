@@ -15,5 +15,11 @@ int test_swap8(void){
 }
 
 int test_htobe(void){
+    int u32_le = 0x12345678;
+    int u32_be = 0x78563412;
 
+    if (u32_be == htobe(u32_le)) {
+        return 1;
+    }
+    return 0;
 }

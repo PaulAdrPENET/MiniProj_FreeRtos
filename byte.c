@@ -18,4 +18,5 @@ int htobe(int u32){
     uint8_t *p = &u32;
     Swap8(&p[0],&p[3]);
     Swap8(&p[1],&p[2]);
+    return u32;
 }
