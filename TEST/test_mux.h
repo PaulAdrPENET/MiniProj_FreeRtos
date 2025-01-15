@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include "../mux.h"
 #include "../trame.h"
+#include "../misc.h"
 
 #ifndef MINI_PROJET_TEST_MUX_DEMUX_H
 #define MINI_PROJET_TEST_MUX_DEMUX_H

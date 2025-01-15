@@ -67,28 +67,12 @@ int test_sum_multiplex(void){
     for (int i = 1; i <= NB_CHANNELS + 1; i++) {
         create_Frame(&frames[i-1], i);
     }
-    int sum_frames = 0;
-    for (int i = 0; i < NB_CHANNELS + 1; i++) {
-        Frame *frame = &frames[i];
-        if (frame->data.channel <= NB_CHANNELS) {
-            sum_frames += frame->data.channel;
-            sum_frames += frame->data.value[0];
-            sum_frames += frame->data.value[1];
-            sum_frames += frame->data.value[2];
-
-        } else if (frame->state.channel == 4) {
-            sum_frames += frame->state.channel;
-            sum_frames += frame->state.state;
-        }
-    }
-
-    int sum_signal_array = 0;
-
     uint8_t signal[14];
     multiplex(frames, &signal);
-    for(int i = 0; i<14;i++){
-        sum_signal_array += signal[i];
-    }
+    int sum_frames = calculate_sum_frames(frames);
+    int sum_signal_array = calculate_sum_signal(&signal);
+
+
     if(sum_frames == sum_signal_array){
         //printf("%d = %d \n", sum_frames, sum_signal_array);
         return 1;
