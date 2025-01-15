@@ -61,35 +61,20 @@ int test_print_parse_signal(){
 }
 
 int test_sum_parse_signal(){
+    //We calculate the sum of each bytes from the 4 frames and compare it to the sum of each bytes of the signal array.
     Frame frames[NB_CHANNELS + 1];
     for (int i = 1; i <= NB_CHANNELS + 1; i++) {
         create_Frame(&frames[i-1], i);
     }
-    int sum_signal_array = 0;
-
     uint8_t signal[14];
     multiplex(frames, &signal);
-    for(int i = 0; i<14;i++){
-        sum_signal_array += signal[i];
-    }
     parse_signal(frames, &signal);
 
-    int sum_frames = 0;
-    for (int i = 0; i < NB_CHANNELS + 1; i++) {
-        Frame *frame = &frames[i];
-        if (frame->data.channel <= NB_CHANNELS) {
-            sum_frames += frame->data.channel;
-            sum_frames += frame->data.value[0];
-            sum_frames += frame->data.value[1];
-            sum_frames += frame->data.value[2];
+    int sum_frames = calculate_sum_frames(frames);
+    int sum_signal_array = calculate_sum_signal(&signal);
 
-        } else if (frame->state.channel == 4) {
-            sum_frames += frame->state.channel;
-            sum_frames += frame->state.state;
-        }
-    }
     if(sum_frames == sum_signal_array){
-        //printf("%d = %d \n", sum_frames, sum_signal_array);
+        printf("%d = %d \n", sum_frames, sum_signal_array);
         return 1;
     }
     else{

@@ -6,6 +6,7 @@
 #include "../parser.h"
 #include "../trame.h"
 #include "../mux.h"
+#include "../misc.h"
 
 #ifndef MINI_PROJET_TEST_PARSER_H
 #define MINI_PROJET_TEST_PARSER_H
