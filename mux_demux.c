@@ -18,5 +18,26 @@ void generate_random_order(uint8_t *order) {
 }
 
 //Multiplexage
+uint8_t multiplex(Frame *frames, uint8_t *signal){
+
+    uint8_t order[4];
+    generate_random_order(order);
+
+    uint8_t array_index = 0;
+    uint8_t channel = 0;
+
+    for (uint8_t i = 0; i < 4; i++) {
+        channel = order[i];
+        if (channel <= NB_CHANNELS) { //Channel X, Y or Z
+            signal[array_index++] = frames[channel - 1].data.channel;
+            signal[array_index++] = frames[channel - 1].data.value[0];
+            signal[array_index++] = frames[channel - 1].data.value[1];
+            signal[array_index++] = frames[channel - 1].data.value[2];
+        } else if (channel == 4) { //Channel 4
+            signal[array_index++] = frames[3].state.channel;
+            signal[array_index++] = frames[3].state.state;
+        }
+    }
+}
 
 //Demultiplexage

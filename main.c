@@ -16,6 +16,7 @@ int main(){
             DECL_TEST(test_generate_random_order),
 #ifdef ADVANCED_TEST_INFO
             DECL_TEST(test_print_frames),
+            DECL_TEST(test_print_multiplex),
 #endif
             LAST_TEST
     };

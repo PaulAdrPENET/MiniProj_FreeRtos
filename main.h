@@ -7,9 +7,9 @@
 #include "TEST/test_signal.h"
 #include "TEST/test.h"
 #include "TEST/test_byte.h"
+#include "TEST/test_mux_demux.h"
 #include "signal.h"
 #include "trame.h"
-#include "TEST/test_mux_demux.h"
 
 #ifndef MINI_PROJET_MAIN_H
 #define MINI_PROJET_MAIN_H
