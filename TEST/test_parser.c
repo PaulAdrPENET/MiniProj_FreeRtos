@@ -39,7 +39,6 @@ int test_print_parse_signal(){
 
     parse_signal(frames, signal);
     printf("Parsed frames : \n");
-    printf("test_print_signal [BEGIN] \n");
     for (int i = 0; i < NB_CHANNELS + 1; i++) {
         Frame *frame = &frames[i];
         if (frame->data.channel <= NB_CHANNELS) {
