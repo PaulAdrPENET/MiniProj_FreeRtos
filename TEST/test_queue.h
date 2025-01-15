@@ -12,4 +12,7 @@ int test_fill_queue(void);
 
 int test_print_queue_content(void);
 
+int test_load_signal_from_queue(void);
+
+
 #endif //MINI_PROJET_TEST_QUEUE_H

@@ -20,4 +20,6 @@ typedef struct {
 
 int fill_queue(Queue *queue);
 
+int load_signal_from_queue(Queue *queue, Frame *frames);
+
 #endif //MINI_PROJET_QUEUE_H

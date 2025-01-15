@@ -28,3 +28,25 @@ int test_print_queue_content(void){
     printf("Is_empty ? : %d \n", test_queue.is_empty);
     return 1;
 }
+
+int test_load_signal_from_queue(void){
+    Frame frames[NB_CHANNELS + 1];
+    uint8_t signal[14];
+    Queue test_queue;
+
+    test_queue.is_empty = 1;
+    fill_queue(&test_queue);
+
+    load_signal_from_queue(&test_queue, frames);
+    int sum_signal_in_queue = 0;
+    for (int i = 0; i < 14; i++) {
+        sum_signal_in_queue += test_queue.signal[i];
+    }
+    if(sum_signal_in_queue == calculate_sum_frames(frames)){
+        return 1;
+    }
+    else{
+        printf("%d = %d \n", sum_signal_in_queue,calculate_sum_frames(frames));
+        return 0;
+    }
+}
