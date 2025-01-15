@@ -20,3 +20,7 @@ int htobe(int u32){
     Swap8(&p[1],&p[2]);
     return u32;
 }
+
+int rand8(void){
+    return rand()%256;
+}

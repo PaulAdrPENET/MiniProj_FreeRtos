@@ -11,5 +11,7 @@ int test_swap8(void);
 
 int test_htobe(void);
 
+int test_rand8(void);
+
 
 #endif //MINI_PROJET_TEST_BYTE_H

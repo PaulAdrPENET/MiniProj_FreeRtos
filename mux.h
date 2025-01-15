@@ -14,4 +14,6 @@ void generate_random_order(uint8_t *order);
 
 uint8_t multiplex(Frame *frames, uint8_t *signal);
 
+uint8_t send_new_signal(uint8_t *signal);
+
 #endif //MINI_PROJET_MUX_DEMUX_H

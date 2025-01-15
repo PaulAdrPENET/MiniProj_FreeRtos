@@ -55,7 +55,7 @@ int test_print_multiplex(void){
 
     //Display the associated signal
     uint8_t signal[14];
-    multiplex(frames, &signal);
+    multiplex(frames, signal);
     printf("Multiplexed Signal \n");
     printf("%02X %02X %02X %02X %02X %02X %02X %02X %02X %02X %02X %02X %02X %02X \n",signal[0], signal[1], signal[2], signal[3], signal[4], signal[5], signal[6], signal[7], signal[8], signal[9], signal[10], signal[11], signal[12], signal[13]);
     return 1;
@@ -68,13 +68,26 @@ int test_sum_multiplex(void){
         create_Frame(&frames[i-1], i);
     }
     uint8_t signal[14];
-    multiplex(frames, &signal);
+    multiplex(frames, signal);
     int sum_frames = calculate_sum_frames(frames);
-    int sum_signal_array = calculate_sum_signal(&signal);
-
+    int sum_signal_array = calculate_sum_signal(signal);
 
     if(sum_frames == sum_signal_array){
         //printf("%d = %d \n", sum_frames, sum_signal_array);
+        return 1;
+    }
+    else{
+        return 0;
+    }
+}
+
+int test_send_new_signal(void){
+    Frame frames[NB_CHANNELS + 1];
+    uint8_t signal[14];
+    send_new_signal(signal);
+    parse_signal(frames,signal);
+    if(calculate_sum_signal(signal) == calculate_sum_frames(frames)){
+        //printf("%d = %d \n", calculate_sum_signal(signal),calculate_sum_frames(frames));
         return 1;
     }
     else{

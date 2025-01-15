@@ -4,7 +4,6 @@
 #include <stdlib.h>
 #include <time.h>
 #include "TEST/test_frame.h"
-#include "TEST/test_signal.h"
 #include "TEST/test.h"
 #include "TEST/test_byte.h"
 #include "TEST/test_mux.h"

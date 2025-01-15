@@ -40,4 +40,12 @@ uint8_t multiplex(Frame *frames, uint8_t *signal){
     }
 }
 
-//Demultiplexage
+uint8_t send_new_signal(uint8_t *signal){
+    //Creation of all four frames.
+    Frame frames[NB_CHANNELS + 1];
+    for (int i = 1; i <= NB_CHANNELS + 1; i++) {
+        create_Frame(&frames[i-1], i);
+    }
+    multiplex(frames, signal);
+    return *signal;
+}

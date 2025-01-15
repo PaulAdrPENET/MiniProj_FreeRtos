@@ -33,11 +33,11 @@ int test_print_parse_signal(){
 
     //Display the associated signal
     uint8_t signal[14];
-    multiplex(frames, &signal);
+    multiplex(frames, signal);
     printf("Multiplexed Signal \n");
     printf("%02X %02X %02X %02X %02X %02X %02X %02X %02X %02X %02X %02X %02X %02X \n",signal[0], signal[1], signal[2], signal[3], signal[4], signal[5], signal[6], signal[7], signal[8], signal[9], signal[10], signal[11], signal[12], signal[13]);
 
-    parse_signal(frames, &signal);
+    parse_signal(frames, signal);
     printf("Parsed frames : \n");
     printf("test_print_signal [BEGIN] \n");
     for (int i = 0; i < NB_CHANNELS + 1; i++) {
@@ -67,14 +67,14 @@ int test_sum_parse_signal(){
         create_Frame(&frames[i-1], i);
     }
     uint8_t signal[14];
-    multiplex(frames, &signal);
-    parse_signal(frames, &signal);
+    multiplex(frames, signal);
+    parse_signal(frames, signal);
 
     int sum_frames = calculate_sum_frames(frames);
-    int sum_signal_array = calculate_sum_signal(&signal);
+    int sum_signal_array = calculate_sum_signal(signal);
 
     if(sum_frames == sum_signal_array){
-        printf("%d = %d \n", sum_frames, sum_signal_array);
+        //printf("%d = %d \n", sum_frames, sum_signal_array);
         return 1;
     }
     else{

@@ -16,6 +16,7 @@ int main(){
             DECL_TEST(test_generate_random_order),
             DECL_TEST(test_sum_multiplex),
             DECL_TEST(test_sum_parse_signal),
+            DECL_TEST(test_send_new_signal),
 #ifdef ADVANCED_TEST_INFO
             DECL_TEST(test_print_frames),
             DECL_TEST(test_print_multiplex),
