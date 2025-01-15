@@ -14,4 +14,6 @@ int test_generate_random_order(void);
 
 int test_print_multiplex(void);
 
+int test_sum_multiplex(void);
+
 #endif //MINI_PROJET_TEST_MUX_DEMUX_H
