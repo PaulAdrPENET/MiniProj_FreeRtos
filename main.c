@@ -19,6 +19,7 @@ int main(){
             DECL_TEST(test_send_new_signal),
             DECL_TEST(test_fill_queue),
             DECL_TEST(test_load_signal_from_queue),
+            DECL_TEST(test_invert_frame_bytes),
 #ifdef ADVANCED_TEST_INFO
             DECL_TEST(test_print_frames),
             DECL_TEST(test_print_multiplex),
@@ -30,4 +31,4 @@ int main(){
     test_all(tests);
 #endif
     return EXIT_SUCCESS;
-}
+}   

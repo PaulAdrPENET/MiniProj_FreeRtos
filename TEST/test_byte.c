@@ -33,3 +33,23 @@ int test_rand8(void){
     }
     return 1;
 }
+
+int test_invert_frame_bytes(void){
+    Frame frames[4];
+    Frame temp_frames[4];
+    for (int i = 1; i <= NB_CHANNELS + 1; i++) {
+        create_Frame(&frames[i-1], i);
+    }
+    memcpy(temp_frames, frames, sizeof(frames));
+    invert_frame_bytes(&frames);
+    if(temp_frames[0].data.value[0] == frames[0].data.value[2]
+    && temp_frames[1].data.value[0] == frames[1].data.value[2]
+    && temp_frames[2].data.value[0] == frames[2].data.value[2]
+    && temp_frames[3].data.value[0] == frames[3].data.value[2]
+    ){
+        return 1;
+    }
+    else{
+        return 0;
+    }
+}
