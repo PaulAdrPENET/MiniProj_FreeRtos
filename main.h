@@ -8,6 +8,7 @@
 #include "TEST/test_byte.h"
 #include "TEST/test_mux.h"
 #include "TEST/test_parser.h"
+#include "TEST/test_queue.h"
 #include "signal.h"
 #include "trame.h"
 
