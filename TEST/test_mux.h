@@ -4,7 +4,7 @@
 #include <stdint.h>
 #include <stdlib.h>
 #include <stdio.h>
-#include "../mux_demux.h"
+#include "../mux.h"
 #include "../trame.h"
 
 #ifndef MINI_PROJET_TEST_MUX_DEMUX_H

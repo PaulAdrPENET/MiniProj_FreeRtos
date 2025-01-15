@@ -2,7 +2,7 @@
 // Created by paula on 14/01/2025.
 //
 
-#include "test_mux_demux.h"
+#include "test_mux.h"
 
 int test_generate_random_order(void) {
     uint8_t order[4];

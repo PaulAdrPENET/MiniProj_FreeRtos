@@ -7,7 +7,7 @@
 #include "TEST/test_signal.h"
 #include "TEST/test.h"
 #include "TEST/test_byte.h"
-#include "TEST/test_mux_demux.h"
+#include "TEST/test_mux.h"
 #include "signal.h"
 #include "trame.h"
 

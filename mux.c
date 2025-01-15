@@ -1,7 +1,7 @@
 //
 // Created by paula on 09/01/2025.
 //
-#include "mux_demux.h"
+#include "mux.h"
 
 void generate_random_order(uint8_t *order) {
     for (uint8_t i = 0; i < 4; i++) {
