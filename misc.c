@@ -41,6 +41,7 @@ int calculate_sum_rx_frames(RX_Frame *frames){
 }
 
 
+
 int calculate_sum_signal(uint8_t *signal){
     int sum_signal_array = 0;
     for(int i = 0; i<14;i++){

@@ -39,7 +39,7 @@ int load_signal_from_queue(Queue *queue, RX_Frame *rx_frames){
 
         rx_frames[3].frame.state.channel = frames[3].state.channel;
         rx_frames[3].frame.state.state = frames[3].state.state;
-        
+
         rx_frames[0].timestamp = (uint32_t)time(NULL);
         rx_frames[1].timestamp = (uint32_t)time(NULL);
         rx_frames[2].timestamp = (uint32_t)time(NULL);
