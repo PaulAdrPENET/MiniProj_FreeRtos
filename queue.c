@@ -16,13 +16,18 @@ int fill_queue(Queue *queue){
     }
 }
 
-int load_signal_from_queue(Queue *queue, Frame *frames){
+int load_signal_from_queue(Queue *queue, RX_Frame *rx_frames){
     if (queue->is_empty == 0) {
+        Frame frames[4];
         parse_signal(frames, queue->signal);
         queue->is_empty = 1;
+        //frames[0].data.channel = rx_frames[0].frame
+        memcpy(&rx_frames->frame, frames, 14);
+        rx_frames[0].timestamp = (uint32_t)time(NULL);
+        rx_frames[1].timestamp = (uint32_t)time(NULL);
+        rx_frames[2].timestamp = (uint32_t)time(NULL);
+        rx_frames[3].timestamp = (uint32_t)time(NULL);
     } else {
         return 0;
     }
 }
-
-

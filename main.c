@@ -31,4 +31,4 @@ int main(){
     test_all(tests);
 #endif
     return EXIT_SUCCESS;
-}   
+}

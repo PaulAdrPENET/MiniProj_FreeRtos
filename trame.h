@@ -1,12 +1,13 @@
 //
 // Created by paula on 09/01/2025.
 //
-#include <stdint.h>
-#include <stdio.h>
-#include "byte.h"
 
 #ifndef MINI_PROJET_TRAME_H
 #define MINI_PROJET_TRAME_H
+
+#include <stdint.h>
+#include <stdio.h>
+//#include "byte.h"
 
 #define NB_CHANNELS 3
 
@@ -23,6 +24,11 @@ typedef struct {
         } state;
     };
 } Frame;
+
+typedef struct {
+    Frame frame;
+    uint32_t timestamp;
+} RX_Frame;
 
 void create_Frame(Frame * frame, uint8_t channel);
 

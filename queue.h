@@ -8,6 +8,7 @@
 #include "trame.h"
 #include "mux.h"
 #include "parser.h"
+#include "time.h"
 
 #ifndef MINI_PROJET_QUEUE_H
 #define MINI_PROJET_QUEUE_H
@@ -20,6 +21,6 @@ typedef struct {
 
 int fill_queue(Queue *queue);
 
-int load_signal_from_queue(Queue *queue, Frame *frames);
+int load_signal_from_queue(Queue *queue, RX_Frame *rx_frames);
 
 #endif //MINI_PROJET_QUEUE_H

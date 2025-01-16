@@ -30,23 +30,23 @@ int test_print_queue_content(void){
 }
 
 int test_load_signal_from_queue(void){
-    Frame frames[NB_CHANNELS + 1];
-    uint8_t signal[14];
+    RX_Frame rx_frames[NB_CHANNELS + 1];
+    //uint8_t signal[14];
     Queue test_queue;
 
     test_queue.is_empty = 1;
     fill_queue(&test_queue);
 
-    load_signal_from_queue(&test_queue, frames);
+    load_signal_from_queue(&test_queue, rx_frames);
     int sum_signal_in_queue = 0;
     for (int i = 0; i < 14; i++) {
         sum_signal_in_queue += test_queue.signal[i];
     }
-    if(sum_signal_in_queue == calculate_sum_frames(frames)){
+    if(sum_signal_in_queue == calculate_sum_rx_frames(rx_frames)){
         return 1;
     }
     else{
-        printf("%d = %d \n", sum_signal_in_queue,calculate_sum_frames(frames));
+        printf("%d = %d \n", sum_signal_in_queue,calculate_sum_rx_frames(rx_frames));
         return 0;
     }
 }

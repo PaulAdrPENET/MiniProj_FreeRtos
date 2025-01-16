@@ -11,4 +11,6 @@ int calculate_sum_frames(Frame *frames);
 
 int calculate_sum_signal(uint8_t *signal);
 
+int calculate_sum_rx_frames(RX_Frame *frames);
+
 #endif //MINI_PROJET_MISC_H

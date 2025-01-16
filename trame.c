@@ -3,6 +3,7 @@
 //
 
 #include "trame.h"
+#include "byte.h"
 
 void create_Frame(Frame * frame, uint8_t channel){
     if(channel <= NB_CHANNELS){
