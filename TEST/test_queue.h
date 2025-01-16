@@ -2,7 +2,7 @@
 // Created by paula on 15/01/2025.
 //
 #include "../trame.h"
-#include "../queue.h"
+#include "../manage_queue.h"
 #include "../misc.h"
 
 #ifndef MINI_PROJET_TEST_QUEUE_H
