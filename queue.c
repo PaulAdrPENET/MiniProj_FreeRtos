@@ -21,8 +21,25 @@ int load_signal_from_queue(Queue *queue, RX_Frame *rx_frames){
         Frame frames[4];
         parse_signal(frames, queue->signal);
         queue->is_empty = 1;
-        //frames[0].data.channel = rx_frames[0].frame
-        memcpy(&rx_frames->frame, frames, 14);
+
+        rx_frames[0].frame.data.channel = frames[0].data.channel;
+        rx_frames[0].frame.data.value[0] = frames[0].data.value[0];
+        rx_frames[0].frame.data.value[1] = frames[0].data.value[1];
+        rx_frames[0].frame.data.value[2] = frames[0].data.value[2];
+
+        rx_frames[1].frame.data.channel = frames[1].data.channel;
+        rx_frames[1].frame.data.value[0] = frames[1].data.value[0];
+        rx_frames[1].frame.data.value[1] = frames[1].data.value[1];
+        rx_frames[1].frame.data.value[2] = frames[1].data.value[2];
+
+        rx_frames[2].frame.data.channel = frames[2].data.channel;
+        rx_frames[2].frame.data.value[0] = frames[2].data.value[0];
+        rx_frames[2].frame.data.value[1] = frames[2].data.value[1];
+        rx_frames[2].frame.data.value[2] = frames[2].data.value[2];
+
+        rx_frames[3].frame.state.channel = frames[3].state.channel;
+        rx_frames[3].frame.state.state = frames[3].state.state;
+        
         rx_frames[0].timestamp = (uint32_t)time(NULL);
         rx_frames[1].timestamp = (uint32_t)time(NULL);
         rx_frames[2].timestamp = (uint32_t)time(NULL);
